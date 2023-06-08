@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/teacherDashB.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top pt-lg-4">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-lg-4" href="../index.html">JSM UNIVERSITY</a>
+      <button class="navbar-toggler nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon span-icon-btn"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button id="logout-btn" class="ms-auto" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="d-flex flex-column justify-content-center align-items-center mb-5">
+    <h1 id="username"></h1>
+    <section class="subject">
+      <div class="containerSub d-flex flex-column justify-content-center align-items-center">
+        <h2>SUBJECT</h2>
+        <div id="subject"></div>
+        <div>
+          <form id="subject-form" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="mb-3">
+              <input type="text" id="subject-input" placeholder="Enter Subject" class="form-control text-center" required>
+            </div>
+            <div>
+              <button type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+    
+        <div class="mt-2">
+          <button id="delete-subject-btn">Delete</button>
+        </div>
+    </section>    
+    
+    <section class="studentForm">
+      <div id="form-container" class="mt-4">
+        <form id="student-form" class="d-flex flex-column">
+          <div class="d-flex justify-content-evenly">
+            <div>
+              <h2>Add Student</h2>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="key" class="form-label">Key:</label>
+                <input type="text" id="key" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact" class="form-label">Contact Number:</label>
+                <input type="text" id="contact" class="form-control" required>
+              </div>
+            </div>
+  
+            <div>
+              <h3>Written Task Section</h3>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="activity1" class="form-label">Activity 1 Score:</label>
+                  <input type="number" id="activity1" class="form-control" required>
+                </div>
+                <div>
+                  <label for="activity1-items" class="form-label">Items:</label>
+                  <input type="number" id="activity1-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="activity2" class="form-label">Activity 2 Score:</label>
+                  <input type="number" id="activity2" class="form-control" required>
+                </div>
+                <div>
+                  <label for="activity2-items" class="form-label">Items:</label>
+                  <input type="number" id="activity2-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="activity3" class="form-label">Activity 3 Score:</label>
+                  <input type="number" id="activity3" class="form-control" required>
+                </div>
+                <div>
+                  <label for="activity3-items" class="form-label">Items:</label>
+                  <input type="number" id="activity3-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="quiz1" class="form-label">Quiz 1 Score:</label>
+                  <input type="number" id="quiz1" class="form-control" required>
+                </div>
+                <div>
+                  <label for="quiz1-items" class="form-label">Items:</label>
+                  <input type="number" id="quiz1-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+               <div>
+                <label for="quiz2" class="form-label">Quiz 2 Score:</label>
+                <input type="number" id="quiz2" class="form-control" required>
+               </div>
+                <div>
+                  <label for="quiz2-items" class="form-label">Items:</label>
+                  <input type="number" id="quiz2-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="quiz3" class="form-label">Quiz 3 Score:</label>
+                  <input type="number" id="quiz3" class="form-control" required>
+                </div>
+                <div>
+                  <label for="quiz3-items" class="form-label">Items:</label>
+                  <input type="number" id="quiz3-items" class="form-control" required>
+                </div>
+              </div>
+            </div>
+          
+            <div>
+              <h3>Performance Task Section</h3>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="attendance" class="form-label">Attendance:</label>
+                  <input type="number" id="attendance" class="form-control" required>
+                </div>
+                <div>
+                  <label for="recitation" class="form-label">Recitation:</label>
+                  <input type="number" id="recitation" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="performance-task1" class="form-label">Performance T 1 Score:</label>
+                  <input type="number" id="performance-task1" class="form-control" required>
+                </div>
+                <div>
+                  <label for="performance-task1-items" class="form-label">Items:</label>
+                  <input type="number" id="performance-task1-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="performance-task2" class="form-label">Performance Task 2 Score:</label>
+                  <input type="number" id="performance-task2" class="form-control" required>
+                </div>
+                <div>
+                  <label for="performance-task2-items" class="form-label">Items:</label>
+                  <input type="number" id="performance-task2-items" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="performance-task3" class="form-label">Performance Task 3 Score:</label>
+                  <input type="number" id="performance-task3" class="form-control" required>
+                </div>
+                <div>
+                  <label for="performance-task3-items" class="form-label">Items:</label>
+                  <input type="number" id="performance-task3-items" class="form-control" required>
+                </div>
+              </div>
+              <h3>Exam Section</h3>
+              <div class="mb-3 d-flex ws">
+                <div>
+                  <label for="exam" class="form-label">Exam Score:</label>
+                  <input type="number" id="exam" class="form-control" required>
+                </div>
+                <div>
+                  <label for="exam-items" class="form-label">Items:</label>
+                  <input type="number" id="exam-items" class="form-control" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-self-center">
+            <button type="submit">Add Student</button>
+          </div>
+        </form>
+      </div>
+    </section>
+      
+      <section class="gradingTable">
+        <div id="table-container" class="mt-4 d-flex flex-column justify-content-center">
+          <h2 class="align-self-center">Student Table</h2>
+          <table id="student-table" class="table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Key</th>
+                <th>Contact</th>
+                <th>Activity 1 Score</th>
+                <th>Activity 2 Score</th>
+                <th>Activity 3 Score</th>
+                <th>Quiz 1 Score</th>
+                <th>Quiz 2 Score</th>
+                <th>Quiz 3 Score</th>
+                <th>Attendance</th>
+                <th>Recitation</th>
+                <th>Performance Task 1</th>
+                <th>Performance Task 2</th>
+                <th>Performance Task 3</th>
+                <th>Exam</th>
+                <th>Final Point</th>
+                <th>Transmuted Grade</th>
+                <th>Remarks</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Student data will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="../js/teacher.js"></script>
+</body>
+</html>

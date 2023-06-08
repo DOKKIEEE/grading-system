@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #10002B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: #9D4EDD;
+}
+
+.nav-item {
+    text-align: center;
+    border: 1px solid #10002B;
+    background-color: #10002B;
+    padding: 8px 24px 8px 24px;
+    border-radius: 3px;
+}
+
+.nav-item:hover {
+    color: #9D4EDD;
+    background-color: #3e2864;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: #9D4EDD;
+}
+
+li a:hover {
+    color: #9D4EDD;
+}
+
+main {
+    height: 90vh;
+}
+
+/* Index CSS */
+
+.logo {
+    width: 500px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px #3e2864;
+}
+
+/* login CSS */
+
+h1 {
+    font-size: 40px;
+}
+
+.container {
+    width: 30vw;
+    height: 60vh;
+    padding: 20px;
+    background-color: #9D4EDD;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #423657;
+}
+
+.btn  {
+    background-color: #10002B;
+    color: #9D4EDD;
+    padding: 8px 24px 8px 24px;
+}
+
+.btn:hover {
+    background-color: #3e2864;
+}
+
+/* Forgot Pass CSS*/
+
+.containerChangePass {
+    width: 30vw;
+    height: 75vh;
+    padding: 30px;
+    background-color: #9D4EDD;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #423657;
+}

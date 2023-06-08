@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #10002B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: #9D4EDD;
+}
+
+button {
+    background-color: #10002B;
+    padding: 8px 16px 8px 16px;
+    color: #9D4EDD; 
+}
+
+button:hover {
+    background-color: #352d42;
+    padding: 8px 16px 8px 16px;
+    color: #9D4EDD; 
+}
+
+button:hover {
+    color: #9D4EDD;
+}
+
+h1 {
+    color: #9D4EDD;
+}
+
+main {
+    height: 200vh;
+    width: 100vw;
+}
+
+section {
+    background-color: #9D4EDD;
+    width: 75vw;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teacherForm {
+    align-self: center;
+}
+
+#teacherTable button {
+    margin: 5px;
+    background-color: #10002B;
+    padding: 8px 16px 8px 16px;
+    color: #9D4EDD; 
+}
+
+#teacherTable button:hover {
+    margin: 5px;
+    background-color: #352d42;
+    padding: 8px 16px 8px 16px;
+    color: #9D4EDD; 
+}
